@@ -2,7 +2,7 @@ from flask_restful import Resource,reqparse
 from db import query
 
 class Logreg(Resource):
-    def get(self):
+    def post(self):
         parser=reqparse.RequestParser()
         parser.add_argument('email',type=str,required=True,help="email required")
         parser.add_argument('password',type=str,required=True,help="password required")
